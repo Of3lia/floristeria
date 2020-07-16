@@ -1,10 +1,13 @@
 ﻿using System;
 
-public class Item
+namespace floristeria
 {
-	public Item(float price)
+	public class Item
 	{
-		this.Price = price;
+		public Item(float price)
+		{
+			this.Price = price;
+		}
+		protected float Price { get; set; }
 	}
-	protected float Price { get; set; }
 }
