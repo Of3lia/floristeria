@@ -8,6 +8,6 @@ namespace floristeria
 		{
 			this.Price = price;
 		}
-		protected float Price { get; set; }
+		public float Price { get; set; }
 	}
 }
