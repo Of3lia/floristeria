@@ -9,5 +9,10 @@ namespace floristeria
             this.Color = color;
         }
         public string Color { get; set; }
+
+        public override string ToString()
+        {
+            return $"Flower (color: {Color}, price: {Price})";
+        }
     }
 }
