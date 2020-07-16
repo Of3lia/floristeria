@@ -1,11 +1,14 @@
 ﻿using System;
 
-public class Tree : Item
+namespace floristeria
 {
-	public Tree(float price, float height): base(price)
+	public class Tree : Item
 	{
-		this.Height = height;
-	}
+		public Tree(float price, float height) : base(price)
+		{
+			this.Height = height;
+		}
 
-	private float Height { get; set; }
+		private float Height { get; set; }
+	}
 }
