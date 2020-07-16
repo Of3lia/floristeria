@@ -8,7 +8,7 @@ namespace floristeria
         {
             this.Material = material;
         }
-        //private string[] materialList = new string[]{"wood", "plastic"};  // para mas adelante
+        
         public MaterialType Material { get; set;}
 
         public override string ToString()
@@ -19,7 +19,7 @@ namespace floristeria
     }
 
     public enum MaterialType{
-        wood = 0,
-        plastic = 1
+        wood,
+        plastic
     }
 }

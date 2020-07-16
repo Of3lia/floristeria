@@ -12,8 +12,10 @@ namespace floristeria
             var flower = new Flower(1.2F, "yellow");
             Console.WriteLine(flower.ToString());
 
-            /*var deco = new Flower(2.5F, MaterialType.wood); // aun no esta listo
-            Console.WriteLine(deco.ToString());*/
+            var deco = new Flower(2.5F, MaterialType.wood.ToString()); // aun no esta listo
+            Console.WriteLine(deco.ToString());
+            
+            Console.WriteLine($"MaterialType: {MaterialType.wood}");
         }
     }
 }
