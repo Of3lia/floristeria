@@ -2,19 +2,19 @@ using System;
 
 namespace floristeria
 {
-    public class Decoration
+    public class Decoration : Item
     {
-        private string _material;
-        private string[] materialList = new string[]{"wood", "plastic"};
-        public string material { get; }
-        /*public void SetMaterial(materialType type)
-        {
-            _material = materialList[parseInt(type)];
-        }
-
-        public enum materialType{
+        public enum MaterialType{
             wood = 0,
             plastic = 1
-        }*/
+        }
+
+        public Decoration(float price, MaterialType material): base(price)
+        {
+            this.Material = material;
+        }
+        //private string[] materialList = new string[]{"wood", "plastic"};  // para mas adelante
+        public MaterialType Material { get; set;}
+
     }
 }

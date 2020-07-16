@@ -2,8 +2,12 @@ using System;
 
 namespace floristeria
 {
-    public class Flower
+    public class Flower : Item
     {
-        public string color { get; set; }
+        public Flower(float price, string color): base(price)
+        {
+            this.Color = color;
+        }
+        public string Color { get; set; }
     }
 }
