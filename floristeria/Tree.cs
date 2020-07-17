@@ -10,5 +10,10 @@ namespace floristeria
 		}
 
 		private float Height { get; set; }
+
+		public override string ToString()
+        {
+            return $"Tree (color: {Height}, price: {Price})";
+        }
 	}
 }
