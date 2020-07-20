@@ -7,8 +7,22 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <TextBlock HorizontalAlignment="Left" Margin="468,173,0,0" TextWrapping="Wrap"
-                   Text="{Binding ElementName=asd}" VerticalAlignment="Top" RenderTransformOrigin="-1.173,-1.264"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
 
+        <TextBlock HorizontalAlignment="Center" Margin="10,10,10,0" TextWrapping="Wrap" Text="Welcome to the Florist"
+                   RenderTransformOrigin="-1.173,-1.264" Grid.Column="1" Grid.Row="0" Height="50" Width="244" FontWeight="Bold" TextDecorations="Underline" VerticalAlignment="Top" LineHeight="16" TextAlignment="Center" FontSize="20"/>
+
+        <Button Grid.Row="1" Height="50" Width="100" FontSize="50">&lt;</Button>
+        <Button Grid.Row="1" Grid.Column="2" Height="50" Width="100" FontSize="50">&gt;</Button>
+        
     </Grid>
 </Window>
