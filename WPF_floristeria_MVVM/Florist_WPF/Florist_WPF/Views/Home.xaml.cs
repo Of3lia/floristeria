@@ -24,7 +24,10 @@ namespace Florist_WPF
         public Home()
         {
             InitializeComponent();
+            ItemPage = new ItemPage();
         }
+
+        private ItemPage ItemPage {get;}
 
         private void AddProductsButton_Click(object sender, RoutedEventArgs e)
         {
@@ -34,8 +37,8 @@ namespace Florist_WPF
 
         private void ItemPageButton_Click(object sender, RoutedEventArgs e)
         {
-            ItemPage itemPage = new ItemPage();
-            this.NavigationService.Navigate(itemPage);
+            ItemPage.Init();
+            this.NavigationService.Navigate(ItemPage);
         }
     }
 

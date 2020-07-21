@@ -28,18 +28,19 @@
 
         <TextBlock HorizontalAlignment="Center" Margin="249,10,249,0" TextWrapping="Wrap" Text="Add Product Menu"
                    RenderTransformOrigin="-1.173,-1.264" Grid.Row="0" Height="50" Width="294" FontWeight="Bold" TextDecorations="Underline" VerticalAlignment="Top" LineHeight="16" TextAlignment="Center" FontSize="20" Grid.ColumnSpan="4"/>
+        <TextBlock TextDecorations="none" Text="0/0" Grid.Row="0" Grid.Column="3" FontSize="35" VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="itemIndex"/>
+        
+        <TextBlock TextDecorations="Underline" Text="Product: " Grid.Row="1" Grid.Column="1" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock TextDecorations="none" Text="type" Grid.Row="1" Grid.Column="2" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="itemType"/>
 
-        <TextBlock TextDecorations="Underline" Text="Product Type: " Grid.Row="1" Grid.Column="1" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <TextBlock TextDecorations="none" Text="type" Grid.Row="1" Grid.Column="2" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock TextDecorations="Underline" Text="Price: " Grid.Row="2" Grid.Column="1" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock TextDecorations="none" Text="price" Grid.Row="2" Grid.Column="2" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="itemPrice"/>
 
-        <TextBlock TextDecorations="Underline" Text="Property: " Grid.Row="2" Grid.Column="1" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <TextBlock TextDecorations="none" Text="property" Grid.Row="2" Grid.Column="2" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock TextDecorations="Underline" Text="Feature: " Grid.Row="3" Grid.Column="1" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="itemFeature"/>
+        <TextBlock TextDecorations="none" Text="feature" Grid.Row="3" Grid.Column="2" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="itemFeature_value"/>
 
-        <TextBlock TextDecorations="Underline" Text="Value: " Grid.Row="3" Grid.Column="1" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-        <TextBlock TextDecorations="none" Text="value" Grid.Row="3" Grid.Column="2" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-
-        <Button Grid.Row="2" Grid.Column="0" Margin="30" x:Name="previous" Click="PreviousItemButton_Click">Next</Button>
-        <Button Grid.Row="2" Grid.Column="3" Margin="30" x:Name="next" Click="NextItemButton_Click" >Previous</Button>
+        <Button Grid.Row="2" Grid.Column="0" Margin="30" x:Name="previous" Click="PreviousItemButton_Click">Previous</Button>
+        <Button Grid.Row="2" Grid.Column="3" Margin="30" x:Name="next" Click="NextItemButton_Click" >Next</Button>
 
         <Button Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Margin="220 30" x:Name="mainMenu" Click="MainMenuButton_Click" >Back to menu</Button>
 
