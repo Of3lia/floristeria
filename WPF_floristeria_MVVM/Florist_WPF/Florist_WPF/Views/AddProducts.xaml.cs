@@ -50,7 +50,7 @@ namespace Florist_WPF.Views
         private void PriceTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
             // Validates Only Numerical Values
-            Regex regex = new Regex("([^0-9,])");
+            Regex regex = new Regex("([^0-9,.])");
             e.Handled = regex.IsMatch(e.Text);
         }
 
@@ -104,7 +104,7 @@ namespace Florist_WPF.Views
             int dot = 0;
             for (int i = 0; i < price.Length; i++)
             {
-                if (price[i] == ',')
+                if (price[i] == ',' || price[i] == '.')
                 {
                     dot++;
                 }
@@ -121,7 +121,7 @@ namespace Florist_WPF.Views
                         int dot2 = 0;
                         for (int i = 0; i < height.Length; i++)
                         {
-                            if (height[i] == ',')
+                            if (height[i] == ',' || price[i] == '.')
                             {
                                 dot2++;
                             }
