@@ -26,7 +26,7 @@
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <TextBlock HorizontalAlignment="Center" Margin="249,10,249,0" TextWrapping="Wrap" Text="Add Product Menu"
+        <TextBlock HorizontalAlignment="Center" Margin="249,10,249,0" TextWrapping="Wrap" Text="Item"
                    RenderTransformOrigin="-1.173,-1.264" Grid.Row="0" Height="50" Width="294" FontWeight="Bold" TextDecorations="Underline" VerticalAlignment="Top" LineHeight="16" TextAlignment="Center" FontSize="20" Grid.ColumnSpan="4"/>
         <TextBlock TextDecorations="none" Text="0/0" Grid.Row="0" Grid.Column="3" FontSize="35" VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="itemIndex"/>
         
