@@ -37,11 +37,14 @@ namespace Florist_WPF.Views
 
         private void ResetButton_Click(object sender, RoutedEventArgs e)
         {
+            TreeType_Click(sender, e);
             TreeType.IsChecked = true;
             selectedTypeRadioButton = "tree";
+            HeightTextBox.Text = "";
             PriceTextBox.Text = "";
             color = "";
             material = MaterialType.wood;
+            WoodType.IsChecked = true;
         }
 
         private void PriceTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
@@ -80,7 +83,7 @@ namespace Florist_WPF.Views
         private void DecorationRadioButton_Click(object sender, RoutedEventArgs e)
         {
             RadioButton _sender = (RadioButton)sender;
-            MessageBox.Show(_sender.Content.ToString());
+            //MessageBox.Show(_sender.Content.ToString());
             if(_sender.Content.ToString() == "Wood") { material = MaterialType.wood; }
             else if(_sender.Content.ToString() == "Plastic") { material = MaterialType.plastic; }
             else { MessageBox.Show("Error on material type"); }

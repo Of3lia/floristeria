@@ -61,8 +61,8 @@
 
         <!-- DECORATION FEATURE-->
         <StackPanel Grid.Column="1" Grid.Row="3"  x:Name="DecorationFeaturePanel" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Hidden">
-            <TextBlock VerticalAlignment="Top" HorizontalAlignment="Center">Decoration Type:</TextBlock>
-            <RadioButton IsChecked="True" Click="DecorationRadioButton_Click">Wood</RadioButton>
+            <TextBlock VerticalAlignment="Top" HorizontalAlignment="Center" >Decoration Type:</TextBlock>
+            <RadioButton IsChecked="True" x:Name="WoodType" Click="DecorationRadioButton_Click">Wood</RadioButton>
             <RadioButton Click="DecorationRadioButton_Click">Plastic</RadioButton>
         </StackPanel>
 
