@@ -13,7 +13,7 @@ namespace Florist_WPF.Models
 			this.Height = height;
 		}
 
-		private float Height { get; set; }
+		public float Height { get; set; }
 
 		public override string ToString()
 		{

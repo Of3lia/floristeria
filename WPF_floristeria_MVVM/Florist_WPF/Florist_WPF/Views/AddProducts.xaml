@@ -28,6 +28,8 @@
         <TextBlock HorizontalAlignment="Center" Margin="249,10,249,0" TextWrapping="Wrap" Text="Add Product Menu"
                    RenderTransformOrigin="-1.173,-1.264" Grid.Row="0" Height="50" Width="294" FontWeight="Bold" TextDecorations="Underline" VerticalAlignment="Top" LineHeight="16" TextAlignment="Center" FontSize="20" Grid.ColumnSpan="3"/>
 
+
+        <!-- ITEM TYPE -->
         <TextBlock TextDecorations="Underline" Text="Product Type: " Grid.Row="1" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
         
         <StackPanel Margin="10" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="RadioButtons">
@@ -36,23 +38,35 @@
             <RadioButton Click="DecorationType_Click" x:Name="DecorationType">Decoration</RadioButton>
         </StackPanel>
         
+        <!-- PRICE -->
         <TextBlock TextDecorations="Underline" Text="Product Price:" Grid.Row="2" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
         <Label FontSize="25" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center">$</Label>
         <TextBox PreviewTextInput="PriceTextBox_PreviewTextInput" Grid.Column="1" Grid.Row="2" Margin="30" FontSize="24" FontWeight="Bold" TextAlignment="Center" x:Name="PriceTextBox"></TextBox>
 
+        
         <TextBlock TextDecorations="Underline" Text="Product Feature: " Grid.Row="3" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" />
 
-        <StackPanel Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Hidden" x:Name="ColorFeature">
-            <RadioButton Click="Feature_RadioButton_Click" IsChecked="True" Background="red">Red</RadioButton>
-            <RadioButton Click="Feature_RadioButton_Click" Background="green">Green</RadioButton>
-            <RadioButton Click="Feature_RadioButton_Click" Background="blue">Blue</RadioButton>
+        <!-- COLOR FEATURE-->
+        <StackPanel Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Hidden" x:Name="ColorFeaturePanel">
+            <RadioButton Click="ColorRadioButton_Click" IsChecked="True" Background="red">Red</RadioButton>
+            <RadioButton Click="ColorRadioButton_Click" Background="green">Green</RadioButton>
+            <RadioButton Click="ColorRadioButton_Click" Background="blue">Blue</RadioButton>
         </StackPanel>
 
-        <StackPanel Grid.Column="1" Grid.Row="3"  x:Name="HeightFeature">
+        <!-- HEIGHT FEATURE-->
+        <StackPanel Grid.Column="1" Grid.Row="3"  x:Name="HeightFeaturePanel">
         <TextBlock VerticalAlignment="Top" HorizontalAlignment="Center">Height in meters</TextBlock>
         <TextBox PreviewTextInput="PriceTextBox_PreviewTextInput" Margin="30" FontSize="24" FontWeight="Bold" TextAlignment="Center" x:Name="HeightTextBox"></TextBox>
         </StackPanel>
-        
+
+        <!-- DECORATION FEATURE-->
+        <StackPanel Grid.Column="1" Grid.Row="3"  x:Name="DecorationFeaturePanel" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Hidden">
+            <TextBlock VerticalAlignment="Top" HorizontalAlignment="Center">Decoration Type:</TextBlock>
+            <RadioButton IsChecked="True" Click="DecorationRadioButton_Click">Wood</RadioButton>
+            <RadioButton Click="DecorationRadioButton_Click">Plastic</RadioButton>
+        </StackPanel>
+
+        <!-- RESET AND ADD PRODUCT BUTTONS-->
         <Button Grid.Column="1" Grid.Row="4" Margin="30" x:Name="ResetButton" Click="ResetButton_Click">Reset</Button>
         <Button Grid.Column="2" Grid.Row="4" Margin="30" x:Name="AddProductButton" Click="AddProductButton_Click" >Add Product</Button>
 
