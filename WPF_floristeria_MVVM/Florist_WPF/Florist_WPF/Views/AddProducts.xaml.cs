@@ -102,7 +102,7 @@ namespace Florist_WPF.Views
 
         #endregion
 
-        private void Feature_aRadioButton_Click(object sender, RoutedEventArgs e)
+        private void Feature_RadioButton_Click(object sender, RoutedEventArgs e)
         {
 
         }
