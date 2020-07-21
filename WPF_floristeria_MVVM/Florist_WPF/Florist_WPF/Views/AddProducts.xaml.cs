@@ -31,7 +31,7 @@ namespace Florist_WPF.Views
         StackPanel currentFeaturePanel;
 
         string selectedTypeRadioButton = "tree";
-        string color = "";
+        string color = "Red";
         MaterialType material = MaterialType.wood;
         
 

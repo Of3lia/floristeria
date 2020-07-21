@@ -25,14 +25,15 @@ namespace Florist_WPF
         {
             InitializeComponent();
             ItemPage = new ItemPage();
+            addProductsPage = new AddProducts();
         }
 
         private ItemPage ItemPage {get;}
+        private AddProducts addProductsPage;
 
         private void AddProductsButton_Click(object sender, RoutedEventArgs e)
         {
-            AddProducts addProd = new AddProducts();
-            this.NavigationService.Navigate(addProd);
+            this.NavigationService.Navigate(addProductsPage);
         }
 
         private void ItemPageButton_Click(object sender, RoutedEventArgs e)
