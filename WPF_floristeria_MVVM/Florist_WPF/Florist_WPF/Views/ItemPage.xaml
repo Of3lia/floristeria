@@ -1,0 +1,47 @@
+﻿<Page x:Class="Florist_WPF.Views.ItemPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Florist_WPF.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ItemPage">
+
+    <Grid>
+        <Grid.Background>
+            <SolidColorBrush Color="White" />
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition Width="3*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <TextBlock HorizontalAlignment="Center" Margin="249,10,249,0" TextWrapping="Wrap" Text="Add Product Menu"
+                   RenderTransformOrigin="-1.173,-1.264" Grid.Row="0" Height="50" Width="294" FontWeight="Bold" TextDecorations="Underline" VerticalAlignment="Top" LineHeight="16" TextAlignment="Center" FontSize="20" Grid.ColumnSpan="4"/>
+
+        <TextBlock TextDecorations="Underline" Text="Product Type: " Grid.Row="1" Grid.Column="1" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock TextDecorations="none" Text="type" Grid.Row="1" Grid.Column="2" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+        <TextBlock TextDecorations="Underline" Text="Property: " Grid.Row="2" Grid.Column="1" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock TextDecorations="none" Text="property" Grid.Row="2" Grid.Column="2" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+        <TextBlock TextDecorations="Underline" Text="Value: " Grid.Row="3" Grid.Column="1" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <TextBlock TextDecorations="none" Text="value" Grid.Row="3" Grid.Column="2" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+
+        <Button Grid.Row="2" Grid.Column="0" Margin="30" x:Name="previous" Click="PreviousItemButton_Click">Next</Button>
+        <Button Grid.Row="2" Grid.Column="3" Margin="30" x:Name="next" Click="NextItemButton_Click" >Previous</Button>
+
+        <Button Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2" Margin="220 30" x:Name="mainMenu" Click="MainMenuButton_Click" >Back to menu</Button>
+
+    </Grid>
+</Page>

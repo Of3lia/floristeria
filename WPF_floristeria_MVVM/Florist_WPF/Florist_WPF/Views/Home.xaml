@@ -29,7 +29,7 @@
 
 
         <Button x:Name="AddProductsButton" Grid.Column="1" Click="AddProductsButton_Click" Grid.Row="1" Margin="30">Add Products</Button>
-        <Button x:Name="SeeAllProductsButton" Grid.Column="1" Grid.Row="2" Margin="30">See All Our Products</Button>
+        <Button x:Name="SeeAllProductsButton" Grid.Column="1" Grid.Row="2" Margin="30" Click="ItemPageButton_Click">See All Our Products</Button>
         <Button x:Name="MoreOptionsButton" Grid.Column="1" Grid.Row="3" Margin="30">More Options</Button>
     </Grid>
 </Page>

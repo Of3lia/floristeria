@@ -12,36 +12,35 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Florist_WPF.Views;
 
-namespace Florist_WPF
+namespace Florist_WPF.Views
 {
     /// <summary>
-    /// Interaction logic for Home.xaml
+    /// Interaction logic for Page1.xaml
     /// </summary>
-    public partial class Home : Page
+    public partial class ItemPage : Page
     {
-        public Home()
+        public ItemPage()
         {
             InitializeComponent();
         }
 
-        private void AddProductsButton_Click(object sender, RoutedEventArgs e)
-        {
-            AddProducts addProd = new AddProducts();
-            this.NavigationService.Navigate(addProd);
-        }
-
-        private void ItemPageButton_Click(object sender, RoutedEventArgs e)
+        private void PreviousItemButton_Click(object sender, RoutedEventArgs e)
         {
             ItemPage itemPage = new ItemPage();
             this.NavigationService.Navigate(itemPage);
         }
-    }
 
-    //private void AddProductsButton_Click(object sender, RoutedEventArgs e)
-    //{
-    //    var window = new AddProducts();
-    //    this.Content = window;
-    //}
+        private void NextItemButton_Click(object sender, RoutedEventArgs e)
+        {
+            ItemPage itemPage = new ItemPage();
+            this.NavigationService.Navigate(itemPage);
+        }
+
+        private void MainMenuButton_Click(object sender, RoutedEventArgs e)
+        {
+            Home home = new Home();
+            this.NavigationService.Navigate(home);
+        }
+    }
 }
