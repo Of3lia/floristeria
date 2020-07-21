@@ -24,8 +24,8 @@
             <RowDefinition Height="100"></RowDefinition>
         </Grid.RowDefinitions>
 
-        <TextBlock HorizontalAlignment="Center" Margin="249,10,249,0" TextWrapping="Wrap" Text="Welcome to the Flower Shop"
-                   RenderTransformOrigin="-1.173,-1.264" Grid.Row="0" Height="50" Width="294" FontWeight="Bold" TextDecorations="Underline" VerticalAlignment="Top" LineHeight="16" TextAlignment="Center" FontSize="20" Grid.ColumnSpan="3"/>
+        <TextBlock HorizontalAlignment="Center" Margin="227,10,234,0" TextWrapping="Wrap" Text="Welcome to The Best Flower Shop"
+                   RenderTransformOrigin="-1.173,-1.264" Grid.Row="0" Height="50" Width="339" FontWeight="Bold" TextDecorations="Underline" VerticalAlignment="Top" LineHeight="16" TextAlignment="Center" FontSize="20" Grid.ColumnSpan="3" Grid.RowSpan="2"/>
 
 
         <Button x:Name="AddProductsButton" Grid.Column="1" Click="AddProductsButton_Click" Grid.Row="1" Margin="30">Add Products</Button>

@@ -25,7 +25,6 @@ namespace Florist_WPF.Views
         public AddProducts()
         {
             InitializeComponent();
-            Stock = new List<Item>();
             currentFeaturePanel = HeightFeaturePanel;
         }
 
@@ -33,24 +32,22 @@ namespace Florist_WPF.Views
 
         string selectedTypeRadioButton = "tree";
         string color = "";
-        public List<Item> Stock;
         MaterialType material = MaterialType.wood;
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            //MessageBox.Show("Hola");
-        }
+        
 
         private void ResetButton_Click(object sender, RoutedEventArgs e)
         {
             TreeType.IsChecked = true;
+            selectedTypeRadioButton = "tree";
             PriceTextBox.Text = "";
+            color = "";
+            material = MaterialType.wood;
         }
 
         private void PriceTextBox_PreviewTextInput(object sender, TextCompositionEventArgs e)
         {
             // Validates Only Numerical Values
-            Regex regex = new Regex("([^0-9.])");
+            Regex regex = new Regex("([^0-9,])");
             e.Handled = regex.IsMatch(e.Text);
         }
 
@@ -104,12 +101,12 @@ namespace Florist_WPF.Views
             int dot = 0;
             for (int i = 0; i < price.Length; i++)
             {
-                if (PriceTextBox.Text[i] == '.')
+                if (price[i] == ',')
                 {
                     dot++;
                 }
             }
-            if (dot > 1 || price == "." || price == "") { MessageBox.Show("Invalid Price Value"); }
+            if (dot > 1 || price == "," || price == "") { MessageBox.Show("Invalid Price Value"); }
             else
             {
                 //MessageBox.Show($"Product Added Successfully\n Type: {selectedTypeRadioButton} \n Price:  {price}");
@@ -119,18 +116,18 @@ namespace Florist_WPF.Views
 
                         string height = HeightTextBox.Text.Replace(" ", "");
                         int dot2 = 0;
-                        for (int i = 0; i < price.Length; i++)
+                        for (int i = 0; i < height.Length; i++)
                         {
-                            if (PriceTextBox.Text[i] == '.')
+                            if (height[i] == ',')
                             {
                                 dot2++;
                             }
                         }
-                        if (dot2 > 1 || height == "." || height == "") { MessageBox.Show("Invalid Height Value"); }
+                        if (dot2 > 1 || height == "," || height == "") { MessageBox.Show("Invalid Height Value"); }
                         else
                         {
-                            Stock.Add(new Tree(float.Parse(price), float.Parse(height)));
-                            Tree _tree = (Tree)Stock[Stock.Count -1];
+                            FlowerShop.Stock.Add(new Tree(float.Parse(price), float.Parse(height)));
+                            Tree _tree = (Tree)FlowerShop.Stock[FlowerShop.Stock.Count -1];
                             MessageBox.Show($"Product Added Successfully\nType: {selectedTypeRadioButton}\nPrice: ${_tree.Price.ToString()}\nHeight: {_tree.Height.ToString()}");
                         }
                         //Stock.Add(new Tree(float.Parse(price), float.Parse(feature)));
@@ -138,22 +135,22 @@ namespace Florist_WPF.Views
                         break;
                     case "flower":
 
-                        Stock.Add(new Flower(float.Parse(price), color));
-                        Flower _flower = (Flower)Stock[Stock.Count - 1];
+                        FlowerShop.Stock.Add(new Flower(float.Parse(price), color));
+                        Flower _flower = (Flower)FlowerShop.Stock[FlowerShop.Stock.Count - 1];
                         MessageBox.Show($"Product Added Successfully\nType: {selectedTypeRadioButton}\nPrice: ${_flower.Price.ToString()}\nColor: {_flower.Color.ToString()}");
 
                         break;
                     case "decoration":
 
-                        Stock.Add(new Decoration(float.Parse(price), material));
-                        Decoration _decoration = (Decoration)Stock[Stock.Count - 1];
+                        FlowerShop.Stock.Add(new Decoration(float.Parse(price), material));
+                        Decoration _decoration = (Decoration)FlowerShop.Stock[FlowerShop.Stock.Count - 1];
                         MessageBox.Show($"Product Added Successfully\nType: {selectedTypeRadioButton}\nPrice: ${_decoration.Price.ToString()}\nHeight: {_decoration.Material.ToString()}");
 
                         break;
                     default:
                         break;
                 }
-                this.NavigationService.Navigate("Home.xaml");
+                this.NavigationService.GoBack();
             }
         }
     }
