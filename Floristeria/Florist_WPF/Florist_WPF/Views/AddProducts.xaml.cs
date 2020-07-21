@@ -147,7 +147,7 @@ namespace Florist_WPF.Views
 
                         FlowerShop.Stock.Add(new Decoration(float.Parse(price), material));
                         Decoration _decoration = (Decoration)FlowerShop.Stock[FlowerShop.Stock.Count - 1];
-                        MessageBox.Show($"Product Added Successfully\nType: {selectedTypeRadioButton}\nPrice: ${_decoration.Price.ToString()}\nHeight: {_decoration.Material.ToString()}");
+                        MessageBox.Show($"Product Added Successfully\nType: {selectedTypeRadioButton}\nPrice: ${_decoration.Price.ToString()}\Material: {_decoration.Material.ToString()}");
 
                         break;
                     default:
