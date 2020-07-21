@@ -11,7 +11,10 @@ namespace Florist_WPF.Models
         public FlowerShop(string name)
         {
             Name = name;
+            Stock = new List<Item>();
         }
         public string Name { get; set; }
+
+        public static List<Item> Stock;
     }
 }

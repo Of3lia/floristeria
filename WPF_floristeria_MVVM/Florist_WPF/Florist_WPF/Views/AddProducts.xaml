@@ -30,10 +30,10 @@
 
         <TextBlock TextDecorations="Underline" Text="Product Type: " Grid.Row="1" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
         
-        <StackPanel Margin="10" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <RadioButton x:Name="TreeType" IsChecked="True">Tree</RadioButton>
-            <RadioButton x:Name="FlowerType">Flower</RadioButton>
-            <RadioButton x:Name="DecorationType">Decoration</RadioButton>
+        <StackPanel Margin="10" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="RadioButtons">
+            <RadioButton Click="TreeType_Click" x:Name="TreeType" IsChecked="True">Tree</RadioButton>
+            <RadioButton Click="FlowerType_Click" x:Name="FlowerType">Flower</RadioButton>
+            <RadioButton Click="DecorationType_Click" x:Name="DecorationType">Decoration</RadioButton>
         </StackPanel>
         
         <TextBlock TextDecorations="Underline" Text="Product Price:" Grid.Row="2" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
@@ -42,10 +42,15 @@
 
         <TextBlock TextDecorations="Underline" Text="Product Feature: " Grid.Row="3" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Center" />
 
-        <StackPanel Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center">
-            <RadioButton IsChecked="True" Background="red">Red</RadioButton>
-            <RadioButton Background="green">Green</RadioButton>
-            <RadioButton Background="blue">Blue</RadioButton>
+        <StackPanel Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Hidden" x:Name="ColorFeature">
+            <RadioButton Click="Feature_RadioButton_Click" IsChecked="True" Background="red">Red</RadioButton>
+            <RadioButton Click="Feature_RadioButton_Click" Background="green">Green</RadioButton>
+            <RadioButton Click="Feature_RadioButton_Click" Background="blue">Blue</RadioButton>
+        </StackPanel>
+
+        <StackPanel Grid.Column="1" Grid.Row="3"  x:Name="HeightFeature">
+        <TextBlock VerticalAlignment="Top" HorizontalAlignment="Center">Height in meters</TextBlock>
+        <TextBox PreviewTextInput="PriceTextBox_PreviewTextInput" Margin="30" FontSize="24" FontWeight="Bold" TextAlignment="Center" x:Name="HeightTextBox"></TextBox>
         </StackPanel>
         
         <Button Grid.Column="1" Grid.Row="4" Margin="30" x:Name="ResetButton" Click="ResetButton_Click">Reset</Button>

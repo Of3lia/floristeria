@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Florist_WPF.Views;
+using Florist_WPF.Models;
 
 namespace Florist_WPF
 {
@@ -24,7 +25,7 @@ namespace Florist_WPF
         public MainWindow()
         {
             InitializeComponent();
-        
+            new FlowerShop("The Best Flower Shop");
         }
     }
 }

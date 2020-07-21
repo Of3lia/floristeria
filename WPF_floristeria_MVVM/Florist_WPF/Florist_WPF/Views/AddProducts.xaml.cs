@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Florist_WPF.Models;
 
 namespace Florist_WPF.Views
 {
@@ -24,7 +25,12 @@ namespace Florist_WPF.Views
         public AddProducts()
         {
             InitializeComponent();
+            Stock = new List<Item>();
         }
+
+        string selectedTypeRadioButton = "tree";
+        string feature = "";
+        public List<Item> Stock;
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -44,6 +50,8 @@ namespace Florist_WPF.Views
             e.Handled = regex.IsMatch(e.Text);
         }
 
+
+
         private void AddProductButton_Click(object sender, RoutedEventArgs e)
         {
             string price = PriceTextBox.Text.Replace(" ", "");
@@ -57,7 +65,46 @@ namespace Florist_WPF.Views
                 }
             }
             if (dot > 1 || price == "." || price == "") { MessageBox.Show("Invalid Price Value"); }
-            else { MessageBox.Show(price); }
+            else
+            {
+                MessageBox.Show($"Product Added Successfully\n Type: {selectedTypeRadioButton} \n Price:  {price}");
+                switch (selectedTypeRadioButton)
+                {
+                    case "tree":
+                        Stock.Add(new Tree(float.Parse(price), float.Parse(feature)));
+
+                        break;
+                    case "flower":
+                        break;
+                    case "decoration":
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+
+        #region RadioButtons
+        private void TreeType_Click(object sender, RoutedEventArgs e)
+        {
+            selectedTypeRadioButton = "tree";
+        }
+
+        private void FlowerType_Click(object sender, RoutedEventArgs e)
+        {
+            selectedTypeRadioButton = "flower";
+        }
+
+        private void DecorationType_Click(object sender, RoutedEventArgs e)
+        {
+            selectedTypeRadioButton = "decoration";
+        }
+
+        #endregion
+
+        private void Feature_aRadioButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
